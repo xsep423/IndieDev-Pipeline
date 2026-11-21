@@ -110,8 +110,8 @@ function SessionsList({ reloadKey }) {
                   {session.current && <span className="ml-2 text-[11px] text-[#00FF66]">esta sesión</span>}
                 </p>
                 <p className="text-[11px] text-gray-500 truncate" title={`Inició ${formatDateTime(session.created_at)}`}>
-                  {session.ip_address ? `${session.ip_address} · ` : ""}
                   activa {timeAgo(session.last_seen_at)}
+                  {session.ip_address ? ` · ${session.ip_address}` : ""}
                 </p>
               </div>
               {!session.current && (
